@@ -9,7 +9,7 @@ pipeline {
          stage('Deploy to Nginx') {
             steps {
                 // Deploy the application to the production environment
-                sh 'cp -R /var/lib/jenkins/workspace/* /var/www/html'
+                sh 'cp -R /var/lib/jenkins/workspace/demo* /var/www/html'
             }
         }
     }
