@@ -10,7 +10,7 @@ pipeline {
         
         stage('Copy to Nginx path') {
             steps {
-                sh 'cp -R /var/lib/jenkins/workspace/demo/* /var/www/html/'
+                sh 'sudo cp -R /var/lib/jenkins/workspace/demo/* /var/www/html/'
                 sh'sudo systemctl restart nginx '
             }
         }
