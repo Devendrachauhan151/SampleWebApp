@@ -10,9 +10,7 @@ pipeline {
         
         stage('Copy to Remote Nginx') {
             steps {
-                sh 'sudo scp -r /var/lib/jenkins/workspace/demo/testing.conf /etc/nginx/sites-enabled/'
-                sh 'sudo systemctl restart nginx'
-                sh 'scp -r /var/lib/jenkins/workspace/demo/* /var/www/'
+                sh 'scp -r /var/lib/jenkins/workspace/demo/* ubuntu@3.111.40.189:/var/www/html/'
             }
         }
     }
