@@ -10,7 +10,7 @@ pipeline {
         
         stage('Copy to Remote Nginx') {
             steps {
-                sh 'sudo scp -r /var/lib/jenkins/workspace/demo/* ubuntu@3.111.40.189:/var/www/html/'
+                sh 'scp -r /var/lib/jenkins/workspace/demo/* jenkins@3.111.40.189:/var/www/html/'
             }
         }
     }
