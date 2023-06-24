@@ -10,7 +10,7 @@ pipeline {
         
         stage('Copy to Remote Nginx') {
             steps {
-                sh 'scp -r $BUILD/* jenkins@3.111.40.189:/var/www/html/'
+                sh 'scp -r $WORKSPACE/* jenkins@3.111.40.189:/var/www/html/'
             }
         }
     }
